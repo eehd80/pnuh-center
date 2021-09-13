@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>부산대학교 영남권역재활병원</title>
+        <meta name="title" content="부산대학교 영남권역재활병원" />
+        <meta name="Description" content="051-240-7000, 부산광역시 서구 구덕로 179, 생명 존중의 정신 부산대학교병원" />
+        <meta
+            name="Keywords"
+            content="부산대학교병원, 부산대학병원, 부산대병원, 영남권역재활병원, Pusan National University Hospital, 온라인예약, 간편예약, 진료과소개, 의료진소개, 오시는길"
+        />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:site_name" content="부산대학교 영남권역재활병원" />
+        <meta property="og:title" content="부산대학교 영남권역재활병원" />
+        <meta property="og:description" content="051-240-7000, 부산광역시 서구 구덕로 179, 생명 존중의 정신 부산대학교병원" />
+        <meta property="og:image" content="./images/common/pnuhicon.ico" />
+        <meta property="og:url" content="https://kids.pnuyh.or.kr/" />
+
+        <link rel="shortcut icon" href="./images/common/pnuhicon.ico" />
+
+        <link rel="stylesheet" type="text/css" href="./include/vender/slick/slick.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="./include/vender/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="./include/css/comm.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./include/vender/slick/slick.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="http://ulm.bvs.co.kr/pnuh/pnuh/include/js/jquery.easing.1.3.js"></script>
+        <script src="./include/vender/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="./include/js/reN_layout.js"></script>
+        <script src="./include/js/comm.js"></script>
+        <!--[if lt IE 9]>
+            <script src="./include/vender/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <!--
+body 클래스 규칙 :
+*상단 간편예약이 있을 경우(메인페이지 경우) typeEasy 클래스 추가 / 없을경우 typeEasy 클래스 삭제
+*상단 띠배너가 있을 경우 typeHeadBnr 클래스 추가 / 없을경우 typeHeadBnr 클래스 삭제
+-->
+    <body class="typeHeaderBnr">
+        <div id="skip_menu">
+            <a href="#contents">컨텐츠 바로가기</a>
+            <a href="#header">주메뉴 바로가기</a>
+            <a href="#footer">푸터 바로가기</a>
+        </div>
+
+        <div id="dim"></div>
+
+        <!-- 상단 띠배너 -->
+        <div class="headerBnr">
+            <div class="bnrWrap">
+                <a href="#none">
+                    <img
+                        src="./images/main/headerBnr_img.png"
+                        alt="코로나19 감염예방을 위해 면회를 제한하오니 내원객 여러분의 협조부탁드립니다."
+                    />
+                </a>
+                <span class="todayLimit">
+                    <input type="checkbox" id="todayCheck" name="todayCheck" /><label for="todayCheck">하루동안 열지않기</label>
+                </span>
+                <button type="button" class="btn_close">닫기</button>
+            </div>
+        </div>
+        <!-- //상단 띠배너 -->
+
+        <div id="header">
+            <header>
+                <h1 class="logo">
+                    <a href="index.html">부산대학교 영남권역재활병원</a>
+                </h1>
+
+                <nav>
+                    <ul id="gnb">
+                        <li class="child">
+                            <a href="#none">병원소개</a>
+                            <div class="gnbTit">
+                                <h2>병원소개</h2>
+                                <p>부산대학교 영남권역재활병원의 <br />각종 소식들을 자세히 소개합니다.</p>
+                            </div>
+                            <ul class="menuM">
+                                <li><a href="#none">병원소개</a></li>
+                                <li><a href="#none">병원미션/비전</a></li>
+                                <li><a href="#none">연혁</a></li>
+                                <li><a href="#none">조직도</a></li>
+                                <li><a href="#none">의료진소개</a></li>
+                            </ul>
+                        </li>
+                        <li class="child">
+                            <a href="#none">이용안내</a>
+                            <div class="gnbTit">
+                                <h2>이용안내</h2>
+                                <p>이용안내에 대한 상세설명이 들어갑니다.</p>
+                            </div>
+                            <ul class="menuM">
+                                <li><a href="#none">접수및수납</a></li>
+                                <li><a href="#none">입퇴원안내</a></li>
+                                <li><a href="#none">시설배치도</a></li>
+                                <li><a href="#none">주요전화번호</a></li>
+                                <li><a href="#none">편의시설</a></li>
+                                <li><a href="#none">입원생활안내</a></li>
+                                <li><a href="#none">주차장안내</a></li>
+                                <li><a href="#none">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li class="child">
+                            <a href="#none">진료안내</a>
+                            <div class="gnbTit">
+                                <h2>진료안내</h2>
+                                <p>진료안내에 대한 상세설명이 들어갑니다.</p>
+                            </div>
+                            <ul class="menuM">
+                                <li><a href="#none">재활의학클리닉</a></li>
+                                <li><a href="#none">재활치료</a></li>
+                                <li><a href="#none">기능검사</a></li>
+                                <li><a href="#none">특수치료</a></li>
+                                <li><a href="#none">트랜짓하우스</a></li>
+                            </ul>
+                        </li>
+                        <li class="child">
+                            <a href="#none">예약/조회/발급</a>
+                            <div class="gnbTit">
+                                <h2>예약/조회/발급</h2>
+                                <p>예약/조회/발급에 대한 상세설명이 들어갑니다.</p>
+                            </div>
+                            <ul class="menuM">
+                                <li><a href="#none">진료예약</a></li>
+                                <li class="child">
+                                    <a href="#none">진료예약조회</a>
+                                    <ul class="menuS">
+                                        <li><a href="#none">예약일정조회</a></li>
+                                        <li><a href="#none">이력조회</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">진료시간표</a></li>
+                                <li><a href="#none">의무기록발급신청</a></li>
+                                <li><a href="#none">증명서 발급/신청</a></li>
+                                <li><a href="#none">비급여진료수가</a></li>
+                            </ul>
+                        </li>
+                        <li class="child">
+                            <a href="#none">건강정보</a>
+                            <div class="gnbTit">
+                                <h2>건강정보</h2>
+                                <p>건강정보에 대한 상세설명이 들어갑니다.</p>
+                            </div>
+                            <ul class="menuM">
+                                <li><a href="#none">질활정보</a></li>
+                                <li><a href="#none">건강정보</a></li>
+                                <li><a href="#none">자가재활정보</a></li>
+                                <li><a href="#none">간병정보</a></li>
+                                <li><a href="#none">리플렛보기</a></li>
+                                <li><a href="#none">재활의학상담</a></li>
+                                <li><a href="#none">관련사이트링크</a></li>
+                            </ul>
+                        </li>
+                        <li class="child">
+                            <a href="#none">열린공간</a>
+                            <div class="gnbTit">
+                                <h2>열린공간</h2>
+                                <p>열린공간에 대한 상세설명이 들어갑니다.</p>
+                            </div>
+                            <ul class="menuM">
+                                <li><a href="#none">공지사항</a></li>
+                                <li><a href="#none">언론보도</a></li>
+                                <li><a href="#none">채용정보</a></li>
+                                <li><a href="#none">고객의소리</a></li>
+                                <li><a href="#none">시회공헌활동</a></li>
+                                <li class="child">
+                                    <a href="#none">기부안내</a>
+                                    <ul class="menuS">
+                                        <li><a href="#none">발전후원회</a></li>
+                                        <li><a href="#none">기부하기</a></li>
+                                        <li><a href="#none">후원자예우</a></li>
+                                        <li><a href="#none">기부자명단</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">재활병원소식</a></li>
+                                <li><a href="#none">우리환자이야기</a></li>
+                            </ul>
+                        </li>
+                        <li class="child">
+                            <a href="#none">공공재활</a>
+                            <div class="gnbTit">
+                                <h2>공공재활</h2>
+                                <p>공공재활에 대한 상세설명이 들어갑니다.</p>
+                            </div>
+                            <ul class="menuM">
+                                <li><a href="#none">재활의료사회사업</a></li>
+                                <li><a href="#none">재활방문간호</a></li>
+                                <li><a href="#none">재활임상심리</a></li>
+                                <li><a href="#none">사회복귀프로그램</a></li>
+                                <li><a href="#none">Rehab-PCT</a></li>
+                                <li><a href="#none">권역재활관리협의회</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="gnb_util">
+                    <a href="#none" class="btn_login">로그인</a>
+
+                    <button type="button" class="btn_topSearch">검색</button>
+                    <!-- 검색영역-->
+                    <section class="sec_topsSearch">
+                        <div class="searchBoxWrap">
+                            <fieldset class="topSrch">
+                                <legend>검색 영역</legend>
+                                <input type="text" class="inp_t" id="topSrch_srch" title="검색어 입력" placeholder="검색어를 입력하세요." />
+                                <button type="button" class="btn_srch">검색</button>
+                            </fieldset>
+                        </div>
+                    </section>
+                    <!-- //검색영역-->
+                </div>
+            </header>
+        </div>
+
+        <hr />
+
+        <script>
+            var gnbDep1 = 0;
+            var gnbDep2 = 0;
+            var gnbDep3 = 0;
+        </script>
+
+        <script>
+            $(function () {
+                /*메인비주얼 슬라이드*/
+                $(".mVisual .list").slick({
+                    // fade: true,
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2400,
+                });
+                function mVisual() {
+                    // if (window.matchMedia("(max-width:1618px)").matches) {
+                    //     $(".mVisual .list").css({
+                    //         width: Math.floor($("#header nav").width() + (window.innerWidth - 1280) / 2 - 17),
+                    //     });
+                    // }
+                    // if (window.matchMedia("(min-width:1619px)").matches) {
+                    //     $(".mVisual .list").css({
+                    //         width: "",
+                    //     });
+                    // }
+                    $(".mVisual .list .slick-next").css({
+                        "margin-left": $(".mVisual .list .slick-dots").width() + 70,
+                    });
+                    if ($(".mVisual .list .slick-dots li").length > 1) {
+                        $(".mVisual .list_control").css({
+                            left: $(".mVisual .list .slick-dots").offset().left + $(".mVisual .list .slick-dots").width() + 5,
+                        });
+                    } else {
+                        $(".mVisual .list_control").hide();
+                    }
+                }
+                mVisual();
+
+                /*하단 배너 슬라이드*/
+                $(".mBtmBnr .list").slick({
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2500,
+                });
+                if ($(".mBtmBnr .list .slick-dots li").length > 1) {
+                    $(".mBtmBnr .list_control").css({
+                        left: $(".mBtmBnr .list .slick-dots").width() + 45,
+                    });
+                } else {
+                    $(".mBtmBnr .list_control").hide();
+                }
+
+                window.addEventListener("resize", resizeThrottler, false);
+                var resizeTimeout;
+                function resizeThrottler() {
+                    if (!resizeTimeout) {
+                        resizeTimeout = setTimeout(function () {
+                            resizeTimeout = null;
+                            mVisual();
+                        }, 66);
+                    }
+                }
+            });
+        </script>
+
+        <div id="container">
+            <div class="mVisual">
+                <div class="list">
+                    <a href="#none" style="background-image: url(./images/main/mVisual-img01.jpg)">
+                        <div class="txt-area">
+                            <em class="point">pnuyh</em>
+                            <strong class="tit">환자 최우선, <br />공감과 보람</strong>
+                        </div>
+                    </a>
+                    <a href="#none" style="background-image: url(./images/main/mVisual-img01.jpg)">
+                        <div class="txt-area">
+                            <em class="point">pnuyh</em>
+                            <strong class="tit">환자 최우선, <br />공감과 보람</strong>
+                        </div>
+                    </a>
+                    <a href="#none" style="background-image: url(./images/main/mVisual-img01.jpg)">
+                        <div class="txt-area">
+                            <em class="point">pnuyh</em>
+                            <strong class="tit">환자 최우선, <br />공감과 보람</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_control">
+                    <button type="button" class="btn_pause">일시정지</button>
+                </div>
+            </div>
+
+            <div class="mNews">
+                <div class="container">
+                    <div class="tab-wrap">
+                        <ul class="successiveTab">
+                            <li id="tab1-1" rel="tabContent1-1" class="on">
+                                <a href="#">재활병원소식</a>
+                            </li>
+                            <li id="tab1-2" rel="tabContent1-2" class="">
+                                <a href="#">공지사항</a>
+                            </li>
+                            <li id="tab1-3" rel="tabContent1-3" class="">
+                                <a href="#">언론보도</a>
+                            </li>
+                        </ul>
+
+                        <div class="successiveWrap">
+                            <div id="tabContent1-1" class="tabCont-area" style="display: block">
+                                <h2>재활병원소식</h2>
+                                <ul class="tab-cont">
+                                    <li>
+                                        <a href="#none">재활병원소식을 알려 주겠음</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">부산대학교병원 2월 찾아가는 시민건강강좌 일정안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none"
+                                            >부산대학교병원 2월 찾아가는 시민건강강좌 일정안내 부산대학교병원 2월 찾아가는 시민건강강좌
+                                            일정안내</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#none">부산대학교병원 2월 찾아가는 시민건강강좌 일정안내</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tabContent1-2" class="tabCont-area" style="display: none">
+                                <h2>공지사항</h2>
+                                <ul class="tab-cont">
+                                    <li>
+                                        <a href="#none">공지사항 인가?</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">부산대학교병원 2월 찾아가는 시민건강강좌 일정안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none"
+                                            >부산대학교병원 2월 찾아가는 시민건강강좌 일정안내 부산대학교병원 2월 찾아가는 시민건강강좌
+                                            일정안내</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#none">부산대학교병원 2월 찾아가는 시민건강강좌 일정안내</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tabContent1-3" class="tabCont-area" style="display: none">
+                                <h2>언론보도</h2>
+                                <ul class="tab-cont">
+                                    <li>
+                                        <a href="#none">언론보도에 대한 소식이 나옵니다.</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">부산대학교병원 2월 찾아가는 시민건강강좌 일정안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none"
+                                            >부산대학교병원 2월 찾아가는 시민건강강좌 일정안내 부산대학교병원 2월 찾아가는 시민건강강좌
+                                            일정안내</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#none">부산대학교병원 2월 찾아가는 시민건강강좌 일정안내</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(".mNews .tab-cont").slick({
+                    infinite: true,
+                    // autoplay: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                    vertical: true,
+                });
+            </script>
+
+            <div class="mIcoBnr">
+                <ul>
+                    <li>
+                        <img src="./images/main/sideBnr-01.png" class="img-bnr" alt="" />
+                        <div class="mico-txt">
+                            <em>나눔과 기부는 오래도록 가슴이 뜨겁습니다.</em>
+                            <strong>발전후원회</strong>
+                            <p>
+                                여러분의 후원금이 질병으로부터 <br />
+                                고통받는 사람들에게 큰 힘이 됩니다
+                            </p>
+                            <a href="#none" class="link-more">더보기 </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="link-box">
+                            <strong>병원소개</strong>
+                            <p>
+                                환자의 가장 가까이에서 통합적인 진료와 <br />
+                                전인적 치료를 구현하다.
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="link-box">
+                            <strong>환자이야기</strong>
+                            <p>
+                                환자의 가장 가까이에서 통합적인 진료와 <br />
+                                전인적 치료를 구현하다.
+                            </p>
+                            <span class="ico-arr"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="link-box">
+                            <strong>채용정보</strong>
+                            <p>
+                                환자의 가장 가까이에서 통합적인 진료와 <br />
+                                전인적 치료를 구현하다.
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="link-box">
+                            <strong>질환정보</strong>
+                            <p>
+                                각종 질환을 정확히 알고 <br />
+                                치료합니다.
+                            </p>
+                            <span class="ico-arr"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="link-box">
+                            <strong>건강정보</strong>
+                            <p>
+                                건강하고 행복한 삶에 <br />
+                                기여하고자 합니다.
+                            </p>
+                            <span class="ico-arr"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mHealth">
+                <div class="container">
+                    <div class="tab-wrap">
+                        <ul class="successiveTab">
+                            <li id="tab2-1" rel="tabContent2-1" class="on">
+                                <a href="#">재활의료사회사업</a>
+                            </li>
+                            <li id="tab2-2" rel="tabContent2-2" class="">
+                                <a href="#">사회공헌활동</a>
+                            </li>
+                            <li id="tab2-3" rel="tabContent2-3" class="">
+                                <a href="#">Rehab-PCT</a>
+                            </li>
+                        </ul>
+
+                        <div class="successiveWrap">
+                            <div id="tabContent2-1" class="tabCont-area" style="display: block">
+                                <div class="mTit-wrap">
+                                    <h2 class="mTit">재활의료사회사업</h2>
+                                    <p class="mTxt">
+                                        환자와 가족이 질병의 치료과정에서 겪는 심리적, 사회적, 경제적 어려움을 <br />
+                                        해결하기 위해서 상담 및 이용 가능한 사회복지 서비스를 연계하고 있습니다.
+                                    </p>
+                                    <a href="#" class="link-more">더보기</a>
+                                </div>
+                                <ul class="tab-cont">
+                                    <li>
+                                        <a href="#none">
+                                            <img src="./images/main/mHealth-img1.png" alt="" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#none"><img src="./images/main/mHealth-img2.png" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none"><img src="./images/main/mHealth-img3.png" alt="" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tabContent2-2" class="tabCont-area" style="display: none">
+                                <div class="mTit-wrap">
+                                    <h2 class="mTit">사회공헌활동</h2>
+                                    <p class="mTxt">
+                                        환자와 가족이 질병의 치료과정에서 겪는 심리적, 사회적, 경제적 어려움을 <br />
+                                        해결하기 위해서 상담 및 이용 가능한 사회복지 서비스를 연계하고 있습니다.
+                                    </p>
+                                    <a href="#" class="link-more">더보기</a>
+                                </div>
+                                <ul class="tab-cont">
+                                    <li>
+                                        <a href="#none">
+                                            <img src="./images/main/mHealth-img2.png" alt="" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#none"><img src="./images/main/mHealth-img3.png" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none"><img src="./images/main/mHealth-img1.png" alt="" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tabContent2-3" class="tabCont-area" style="display: none">
+                                <div class="mTit-wrap">
+                                    <h2 class="mTit">Rehab-PCT</h2>
+                                    <p class="mTxt">
+                                        환자와 가족이 질병의 치료과정에서 겪는 심리적, 사회적, 경제적 어려움을 <br />
+                                        해결하기 위해서 상담 및 이용 가능한 사회복지 서비스를 연계하고 있습니다.
+                                    </p>
+                                    <a href="#" class="link-more">더보기</a>
+                                </div>
+                                <ul class="tab-cont">
+                                    <li>
+                                        <a href="#none">
+                                            <img src="./images/main/mHealth-img3.png" alt="" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#none"><img src="./images/main/mHealth-img1.png" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none"><img src="./images/main/mHealth-img2.png" alt="" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(".mHealth .tab-cont").slick({
+                    infinite: true,
+                    // autoplay: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                });
+            </script>
+
+            <div class="mBtm">
+                <div class="container">
+                    <div class="tab-wrap">
+                        <ul class="successiveTab">
+                            <li id="tab3-1" rel="tabContent3-1" class="on">
+                                <a href="#">예약</a>
+                                <div class="desc">
+                                    <strong>진료 예약 서비스 안내</strong>
+                                    <p>
+                                        고객님께 빠르고 편리한 <br />
+                                        예약 서비스를 제공합니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li id="tab3-2" rel="tabContent3-2" class="">
+                                <a href="#">조회</a>
+                                <div class="desc">
+                                    <strong>진료 조회 서비스 안내</strong>
+                                    <p>
+                                        고객님께 빠르고 편리한 <br />
+                                        조회 서비스를 제공합니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li id="tab3-3" rel="tabContent3-3" class="">
+                                <a href="#">발급</a>
+                                <div class="desc">
+                                    <strong>진료 발급 서비스 안내</strong>
+                                    <p>
+                                        고객님께 빠르고 편리한<br />
+                                        발급 서비스를 제공합니다.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="successiveWrap">
+                            <div id="tabContent3-1" style="display: block">
+                                <h2 class="blind">예약</h2>
+                                <ul class="tab-cont">
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tabContent3-2" style="display: none">
+                                <h2 class="blind">조회</h2>
+                                <ul class="tab-cont">
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tabContent3-3" style="display: none">
+                                <h2 class="blind">발급</h2>
+                                <ul class="tab-cont">
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $("#tabContent3-1 .tab-cont").slick({
+                    infinite: true,
+                    // autoplay: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    dots: true,
+                    customPaging: function (slider, i) {
+                        var thumb = jQuery(slider.$slides[i]).data();
+                        return "<a> 0" + (i + 1) + "</a>";
+                    },
+                });
+                $("#tabContent3-2 .tab-cont").slick({
+                    infinite: true,
+                    // autoplay: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    dots: true,
+                    customPaging: function (slider, i) {
+                        var thumb = jQuery(slider.$slides[i]).data();
+                        return "<a> 0" + (i + 1) + "</a>";
+                    },
+                });
+
+                $(function () {
+                    let $mBtmDots = $("#tabContent3-1 .slick-dots"),
+                        dotsLast = $mBtmDots.find("li").last(),
+                        dotsLength = $mBtmDots.find("li").length,
+                        num = 1;
+
+                    $mBtmDots.append('<li class="lst"> / 0' + dotsLength + "</li>");
+                });
+            </script>
+
+            <div class="mInfo">
+                <div class="container">
+                    <div class="mTel-area">
+                        <strong class="mTit">진료예약번호</strong>
+                        <a href="tel:1577-7512" class="mNum">1577-7512</a>
+                        <dl class="mTime">
+                            <dt>평일 접수</dt>
+                            <dd>08:00 ~ 16:00</dd>
+                            <dt>평일 진료</dt>
+                            <dd>09:00 ~ 17:30</dd>
+                            <dt>재활 외래</dt>
+                            <dd>055.360.4000</dd>
+                        </dl>
+                    </div>
+                    <div class="mGoto-area">
+                        <ul>
+                            <li><a href="#">원내배치도</a></li>
+                            <li><a href="#">오시는길</a></li>
+                            <li><a href="#">재활의학상담</a></li>
+                            <li><a href="#">기부안내</a></li>
+                            <li><a href="#">주요전화번호</a></li>
+                            <li><a href="#">고객의소리</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div id="footer">
+            <strong class="network"><button type="button">PNUH 네트워크</button></strong>
+
+            <div class="pop_wrap" id="pnuh_network">
+                <!-- popup layer(레이어) -->
+                <section class="popLayout2 popLayer">
+                    <h2 class="popTit">PNUH 네트워크</h2>
+
+                    <div class="popConts">
+                        <div class="popInner limit">
+                            <!-- 팝업 내용 입력-->
+
+                            <div class="network_list network01">
+                                <h3>PNUH 네트워크</h3>
+                                <ul>
+                                    <li><a href="#none">부산대학교병원</a></li>
+                                    <li><a href="#none">양산부산대학교병원</a></li>
+                                    <li><a href="#none">부산대학교어린이병원</a></li>
+                                    <li><a href="#none">부산대학교치과병원</a></li>
+                                    <li><a href="#none">부산대학교한방병원</a></li>
+                                    <li><a href="#none">영남권역재활병원</a></li>
+                                    <li><a href="#none">진료협력센터</a></li>
+                                    <li><a href="#none">발전위원회</a></li>
+                                    <li><a href="#none">의생명연구원</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="network_list network02">
+                                <h3>진료과 및 클리닉</h3>
+                                <ul>
+                                    <li><a href="#none">가정의학과</a></li>
+                                    <li><a href="#none">감염내과</a></li>
+                                    <li><a href="#none">내분비대사내과</a></li>
+                                    <li><a href="#none">류마티스내과</a></li>
+                                    <li><a href="#none">마취통증의학과</a></li>
+                                    <li><a href="#none">방사선종양학과</a></li>
+                                    <li><a href="#none">병리학과</a></li>
+                                    <li><a href="#none">비뇨의학과</a></li>
+                                    <li><a href="#none">산부인과</a></li>
+                                    <li><a href="#none">성형외과</a></li>
+                                    <li><a href="#none">소화청소년과</a></li>
+                                    <li><a href="#none">소화기내과</a></li>
+                                    <li><a href="#none">순환기내과</a></li>
+                                    <li><a href="#none">신경과</a></li>
+                                    <li><a href="#none">신경외과</a></li>
+                                    <li><a href="#none">신장내과</a></li>
+                                    <li><a href="#none">안과</a></li>
+                                    <li><a href="#none">영상의학과</a></li>
+                                    <li><a href="#none">외과</a></li>
+                                    <li><a href="#none">외상외과</a></li>
+                                    <li><a href="#none">응급의학과</a></li>
+                                    <li><a href="#none">이빈인후과</a></li>
+                                    <li><a href="#none">재활의학과</a></li>
+                                    <li><a href="#none">정신건강의학과</a></li>
+                                    <li><a href="#none">정형외과</a></li>
+                                    <li><a href="#none">진단검사의학과</a></li>
+                                    <li><a href="#none">치과진료센터</a></li>
+                                    <li><a href="#none">피부과</a></li>
+                                    <li><a href="#none">한의과</a></li>
+                                    <li><a href="#none">핵의학과</a></li>
+                                    <li><a href="#none">혈액종양내과</a></li>
+                                    <li><a href="#none">호흡기알레르기내과</a></li>
+                                    <li><a href="#none">흉부외과</a></li>
+                                    <li><a href="#none">간췌담도암클리닉</a></li>
+                                    <li><a href="#none">대장암클리닉</a></li>
+                                    <li><a href="#none">부인암클리닉</a></li>
+                                    <li><a href="#none">위암클리닉</a></li>
+                                    <li><a href="#none">유방암클리닉</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="network_list network03">
+                                <h3>주요센터</h3>
+                                <ul>
+                                    <li><a href="#none">감마나이프센터</a></li>
+                                    <li><a href="#none">건강증진센터</a></li>
+                                    <li><a href="#none">국제진료센터</a></li>
+                                    <li><a href="#none">권역외상센터</a></li>
+                                    <li><a href="#none">권역호흡기전문질환센터</a></li>
+                                    <li><a href="#none">금연지원센터</a></li>
+                                    <li><a href="#none">난임센터</a></li>
+                                    <li><a href="#none">로봇수술센터</a></li>
+                                    <li><a href="#none">부산지역응급의료센터</a></li>
+                                    <li><a href="#none">부산장애인구강진료센터</a></li>
+                                    <li><a href="#none">부산지역암센터</a></li>
+                                    <li><a href="#none">심뇌혈관센터</a></li>
+                                    <li><a href="#none">완화의료센터</a></li>
+                                    <li><a href="#none">임상시험센터</a></li>
+                                    <li><a href="#none">장기이식센터</a></li>
+                                    <li><a href="#none">조혈모세포이식센터</a></li>
+                                    <li><a href="#none">토모테라피센터</a></li>
+                                    <li><a href="#none">통합의학센터</a></li>
+                                    <li><a href="#none">PET센터</a></li>
+                                    <li><a href="#none">해양의료연구센터</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn_popClose">창닫기</button>
+                </section>
+                <!-- //popup layer(레이어) -->
+            </div>
+
+            <footer>
+                <ul class="f_mark">
+                    <li>
+                        <img
+                            src="./images/layout/f_mark_isms.png"
+                            alt="정보보호관리체계인증 &middot; Information Security Management System &middot; KISA 한국인터넷진흥원"
+                            class="markImg"
+                        />
+                        <span>
+                            인증범위 : 의료정보시스템 (EMR, OCS) 및 홈페이지 서비스 운영<br />
+                            유효기간 : 2017.12.11 ~ 2020.12.10
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./images/layout/f_mark_alio.png" alt="공공기관 채용정보 시스템" class="markImg" />
+                        <span>
+                            ALIO<br />
+                            JOB-ALIO
+                        </span>
+                    </li>
+                    <li>
+                        <img
+                            src="./images/layout/f_mark_koiha.png"
+                            alt="HEALTHCARE QUALITY PATIENT SAFETY 보건복지부 인증 의료기관"
+                            class="markImg"
+                        />
+                        <span>
+                            보건복지부 의료기관<br />
+                            평가인증
+                        </span>
+                    </li>
+                </ul>
+
+                <ul class="f_sns">
+                    <li><a href="#none" class="btn_cirFacebook">페이스북</a></li>
+                    <li><a href="#none" class="btn_cirNblog">네이버 블로그</a></li>
+                    <li><a href="#none" class="btn_cirYoutube">유투브</a></li>
+                    <li><a href="#none" class="btn_cirNpost">네이버 포스트</a></li>
+                </ul>
+
+                <ul class="f_menu">
+                    <li><a href="#none" class="point">개인정보처리방침</a></li>
+                    <li><a href="#none">영상정보처리기기 설치운영방침</a></li>
+                    <li><a href="#none">이메일주소수집거부</a></li>
+                    <li><a href="#none">웹접근성준수지침</a></li>
+                    <li><a href="#none">홈페이지 이용안내</a></li>
+                    <li><a href="#none">환자권리장전</a></li>
+                    <li><a href="#none">병원유리강령</a></li>
+                    <li><a href="#none">고객헌장</a></li>
+                </ul>
+
+                <address>
+                    <span>49241 부산광역시 서구 구덕로 179 부산대학교병원</span> <em>대표전화 : 051-240-7000</em>
+                    <em>응급전화 : 051-240-7158</em> <em>전화예약 : 051-240-7300</em>
+                </address>
+                <p class="copyright">ⓒ 2020 Pusan National University Hospital. All Rights Reserved. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <button type="button" class="btn_sideTop">위로</button>
+    </body>
+</html>
