@@ -21,7 +21,6 @@
         <link rel="shortcut icon" href="./images/common/pnuhicon.ico" />
 
         <link rel="stylesheet" type="text/css" href="./include/vender/slick/slick.css" />
-        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
         <link
             rel="stylesheet"
             href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
@@ -35,7 +34,6 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="./include/vender/slick/slick.min.js"></script>
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script src="http://ulm.bvs.co.kr/pnuh/pnuh/include/js/jquery.easing.1.3.js"></script>
         <script src="./include/vender/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="./include/js/reN_layout.js"></script>
@@ -238,61 +236,6 @@ body 클래스 규칙 :
 
         <script>
             $(function () {
-                /*메인비주얼 슬라이드*/
-                $(".mVisual .list").slick({
-                    // fade: true,
-                    infinite: true,
-                    dots: true,
-                    arrows: false,
-                    speed: 500,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 2400,
-                });
-                function mVisual() {
-                    // if (window.matchMedia("(max-width:1618px)").matches) {
-                    //     $(".mVisual .list").css({
-                    //         width: Math.floor($("#header nav").width() + (window.innerWidth - 1280) / 2 - 17),
-                    //     });
-                    // }
-                    // if (window.matchMedia("(min-width:1619px)").matches) {
-                    //     $(".mVisual .list").css({
-                    //         width: "",
-                    //     });
-                    // }
-                    $(".mVisual .list .slick-next").css({
-                        "margin-left": $(".mVisual .list .slick-dots").width() + 70,
-                    });
-                    if ($(".mVisual .list .slick-dots li").length > 1) {
-                        $(".mVisual .list_control").css({
-                            left: $(".mVisual .list .slick-dots").offset().left + $(".mVisual .list .slick-dots").width() + 5,
-                        });
-                    } else {
-                        $(".mVisual .list_control").hide();
-                    }
-                }
-                mVisual();
-
-                /*하단 배너 슬라이드*/
-                $(".mBtmBnr .list").slick({
-                    infinite: true,
-                    dots: true,
-                    arrows: false,
-                    speed: 500,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 2500,
-                });
-                if ($(".mBtmBnr .list .slick-dots li").length > 1) {
-                    $(".mBtmBnr .list_control").css({
-                        left: $(".mBtmBnr .list .slick-dots").width() + 45,
-                    });
-                } else {
-                    $(".mBtmBnr .list_control").hide();
-                }
-
                 window.addEventListener("resize", resizeThrottler, false);
                 var resizeTimeout;
                 function resizeThrottler() {
@@ -332,26 +275,47 @@ body 클래스 규칙 :
                     <button type="button" class="btn_pause">일시정지</button>
                 </div>
             </div>
+            <script>
+                /*메인비주얼 슬라이드*/
+                $(".mVisual .list").slick({
+                    // fade: true,
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2500,
+                });
+                function mVisual() {
+                    $(".mVisual .list .slick-next").css({
+                        "margin-left": $(".mVisual .list .slick-dots").width() + 70,
+                    });
+                    if ($(".mVisual .list .slick-dots li").length > 1) {
+                        $(".mVisual .list_control").css({
+                            left: $(".mVisual .list .slick-dots").offset().left + $(".mVisual .list .slick-dots").width() + 5,
+                        });
+                    } else {
+                        $(".mVisual .list_control").hide();
+                    }
+                }
+                mVisual();
+            </script>
 
             <div class="mNews">
                 <div class="container">
                     <div class="tab-wrap">
                         <ul class="successiveTab">
-                            <li id="tab1-1" rel="tabContent1-1" class="on">
-                                <a href="#">재활병원소식</a>
-                            </li>
-                            <li id="tab1-2" rel="tabContent1-2" class="">
-                                <a href="#">공지사항</a>
-                            </li>
-                            <li id="tab1-3" rel="tabContent1-3" class="">
-                                <a href="#">언론보도</a>
-                            </li>
+                            <button class="active">재활병원소식</button>
+                            <button>공지사항</button>
+                            <button>언론보도</button>
                         </ul>
 
-                        <div class="successiveWrap">
-                            <div id="tabContent1-1" class="tabCont-area" style="display: block">
+                        <div class="successiveWrap tabs">
+                            <div class="tab active">
                                 <h2>재활병원소식</h2>
-                                <ul class="tab-cont">
+                                <ul class="slider">
                                     <li>
                                         <a href="#none">재활병원소식을 알려 주겠음</a>
                                     </li>
@@ -369,9 +333,9 @@ body 클래스 규칙 :
                                     </li>
                                 </ul>
                             </div>
-                            <div id="tabContent1-2" class="tabCont-area" style="display: none">
+                            <div class="tab">
                                 <h2>공지사항</h2>
-                                <ul class="tab-cont">
+                                <ul class="slider">
                                     <li>
                                         <a href="#none">공지사항 인가?</a>
                                     </li>
@@ -389,9 +353,9 @@ body 클래스 규칙 :
                                     </li>
                                 </ul>
                             </div>
-                            <div id="tabContent1-3" class="tabCont-area" style="display: none">
+                            <div class="tab">
                                 <h2>언론보도</h2>
-                                <ul class="tab-cont">
+                                <ul class="slider">
                                     <li>
                                         <a href="#none">언론보도에 대한 소식이 나옵니다.</a>
                                     </li>
@@ -414,9 +378,9 @@ body 클래스 규칙 :
                 </div>
             </div>
             <script>
-                $(".mNews .tab-cont").slick({
+                $(".mNews .slider").slick({
                     infinite: true,
-                    // autoplay: true,
+                    autoplay: true,
                     speed: 300,
                     slidesToShow: 1,
                     adaptiveHeight: true,
@@ -488,23 +452,17 @@ body 클래스 규칙 :
                     </li>
                 </ul>
             </div>
+
             <div class="mHealth">
                 <div class="container">
                     <div class="tab-wrap">
-                        <ul class="successiveTab">
-                            <li id="tab2-1" rel="tabContent2-1" class="on">
-                                <a href="#">재활의료사회사업</a>
-                            </li>
-                            <li id="tab2-2" rel="tabContent2-2" class="">
-                                <a href="#">사회공헌활동</a>
-                            </li>
-                            <li id="tab2-3" rel="tabContent2-3" class="">
-                                <a href="#">Rehab-PCT</a>
-                            </li>
-                        </ul>
-
-                        <div class="successiveWrap">
-                            <div id="tabContent2-1" class="tabCont-area" style="display: block">
+                        <div class="successiveTab">
+                            <button class="active">재활의료사회사업</button>
+                            <button>사회공헌활동</button>
+                            <button>Rehab-PCT</button>
+                        </div>
+                        <div class="successiveWrap tabs">
+                            <div class="tab active">
                                 <div class="mTit-wrap">
                                     <h2 class="mTit">재활의료사회사업</h2>
                                     <p class="mTxt">
@@ -513,21 +471,19 @@ body 클래스 규칙 :
                                     </p>
                                     <a href="#" class="link-more">더보기</a>
                                 </div>
-                                <ul class="tab-cont">
+                                <ul class="slider">
                                     <li>
-                                        <a href="#none">
-                                            <img src="./images/main/mHealth-img1.png" alt="" />
-                                        </a>
+                                        <img src="./images/main/mHealth-img1.png" alt="" />
                                     </li>
                                     <li>
-                                        <a href="#none"><img src="./images/main/mHealth-img2.png" alt="" /></a>
+                                        <img src="./images/main/mHealth-img2.png" alt="" />
                                     </li>
                                     <li>
-                                        <a href="#none"><img src="./images/main/mHealth-img3.png" alt="" /></a>
+                                        <img src="./images/main/mHealth-img3.png" alt="" />
                                     </li>
                                 </ul>
                             </div>
-                            <div id="tabContent2-2" class="tabCont-area" style="display: none">
+                            <div class="tab">
                                 <div class="mTit-wrap">
                                     <h2 class="mTit">사회공헌활동</h2>
                                     <p class="mTxt">
@@ -536,21 +492,19 @@ body 클래스 규칙 :
                                     </p>
                                     <a href="#" class="link-more">더보기</a>
                                 </div>
-                                <ul class="tab-cont">
+                                <ul class="slider">
                                     <li>
-                                        <a href="#none">
-                                            <img src="./images/main/mHealth-img2.png" alt="" />
-                                        </a>
+                                        <img src="./images/main/mHealth-img2.png" alt="" />
                                     </li>
                                     <li>
-                                        <a href="#none"><img src="./images/main/mHealth-img3.png" alt="" /></a>
+                                        <img src="./images/main/mHealth-img1.png" alt="" />
                                     </li>
                                     <li>
-                                        <a href="#none"><img src="./images/main/mHealth-img1.png" alt="" /></a>
+                                        <img src="./images/main/mHealth-img3.png" alt="" />
                                     </li>
                                 </ul>
                             </div>
-                            <div id="tabContent2-3" class="tabCont-area" style="display: none">
+                            <div class="tab">
                                 <div class="mTit-wrap">
                                     <h2 class="mTit">Rehab-PCT</h2>
                                     <p class="mTxt">
@@ -559,17 +513,15 @@ body 클래스 규칙 :
                                     </p>
                                     <a href="#" class="link-more">더보기</a>
                                 </div>
-                                <ul class="tab-cont">
+                                <ul class="slider">
                                     <li>
-                                        <a href="#none">
-                                            <img src="./images/main/mHealth-img3.png" alt="" />
-                                        </a>
+                                        <img src="./images/main/mHealth-img3.png" alt="" />
                                     </li>
                                     <li>
-                                        <a href="#none"><img src="./images/main/mHealth-img1.png" alt="" /></a>
+                                        <img src="./images/main/mHealth-img2.png" alt="" />
                                     </li>
                                     <li>
-                                        <a href="#none"><img src="./images/main/mHealth-img2.png" alt="" /></a>
+                                        <img src="./images/main/mHealth-img1.png" alt="" />
                                     </li>
                                 </ul>
                             </div>
@@ -578,20 +530,28 @@ body 클래스 규칙 :
                 </div>
             </div>
             <script>
-                $(".mHealth .tab-cont").slick({
+                $(".mHealth .slider").slick({
                     infinite: true,
                     // autoplay: true,
                     speed: 300,
                     slidesToShow: 1,
+                    centerMode: true,
+                    // centerPadding: "200px",
                 });
             </script>
 
             <div class="mBtm">
                 <div class="container">
                     <div class="tab-wrap">
-                        <ul class="successiveTab">
-                            <li id="tab3-1" rel="tabContent3-1" class="on">
-                                <a href="#">예약</a>
+                        <div class="successiveTab">
+                            <button class="active">예약</button>
+                            <button>조회</button>
+                            <button>발급</button>
+                        </div>
+
+                        <div class="successiveWrap tabs">
+                            <div class="tab tab-1 active">
+                                <h2 class="blind">예약</h2>
                                 <div class="desc">
                                     <strong>진료 예약 서비스 안내</strong>
                                     <p>
@@ -599,9 +559,38 @@ body 클래스 규칙 :
                                         예약 서비스를 제공합니다.
                                     </p>
                                 </div>
-                            </li>
-                            <li id="tab3-2" rel="tabContent3-2" class="">
-                                <a href="#">조회</a>
+                                <ul class="slider">
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">예약호흡재활클리닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클리닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클리닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab tab-2">
+                                <h2 class="blind">조회</h2>
                                 <div class="desc">
                                     <strong>진료 조회 서비스 안내</strong>
                                     <p>
@@ -609,26 +598,49 @@ body 클래스 규칙 :
                                         조회 서비스를 제공합니다.
                                     </p>
                                 </div>
-                            </li>
-                            <li id="tab3-3" rel="tabContent3-3" class="">
-                                <a href="#">발급</a>
+                                <ul class="slider">
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">조회호흡재활클리닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클리닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                    <li>
+                                        <em class="mCa">재활의학클리닉</em>
+                                        <strong class="mTit">호흡재활클리닉</strong>
+                                        <p class="mTxt">
+                                            교육 및 다양한 기법과 기구를 이용한 <br />
+                                            포괄적이고 집중적인 치료를 위한 클리닉
+                                        </p>
+                                        <a href="#" class="btn_more"> 더보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab tab-3">
+                                <h2 class="blind">발급</h2>
                                 <div class="desc">
                                     <strong>진료 발급 서비스 안내</strong>
                                     <p>
-                                        고객님께 빠르고 편리한<br />
+                                        고객님께 빠르고 편리한 <br />
                                         발급 서비스를 제공합니다.
                                     </p>
                                 </div>
-                            </li>
-                        </ul>
-
-                        <div class="successiveWrap">
-                            <div id="tabContent3-1" style="display: block">
-                                <h2 class="blind">예약</h2>
-                                <ul class="tab-cont">
+                                <ul class="slider">
                                     <li>
                                         <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <strong class="mTit">발급호흡재활클리닉</strong>
                                         <p class="mTxt">
                                             교육 및 다양한 기법과 기구를 이용한 <br />
                                             포괄적이고 집중적인 치료를 위한 클리닉
@@ -637,7 +649,7 @@ body 클래스 규칙 :
                                     </li>
                                     <li>
                                         <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <strong class="mTit">호흡재활클리닉</strong>
                                         <p class="mTxt">
                                             교육 및 다양한 기법과 기구를 이용한 <br />
                                             포괄적이고 집중적인 치료를 위한 클리닉
@@ -646,21 +658,7 @@ body 클래스 규칙 :
                                     </li>
                                     <li>
                                         <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
-                                        <p class="mTxt">
-                                            교육 및 다양한 기법과 기구를 이용한 <br />
-                                            포괄적이고 집중적인 치료를 위한 클리닉
-                                        </p>
-                                        <a href="#" class="btn_more"> 더보기</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="tabContent3-2" style="display: none">
-                                <h2 class="blind">조회</h2>
-                                <ul class="tab-cont">
-                                    <li>
-                                        <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <strong class="mTit">호흡재활클리닉</strong>
                                         <p class="mTxt">
                                             교육 및 다양한 기법과 기구를 이용한 <br />
                                             포괄적이고 집중적인 치료를 위한 클리닉
@@ -669,57 +667,7 @@ body 클래스 규칙 :
                                     </li>
                                     <li>
                                         <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
-                                        <p class="mTxt">
-                                            교육 및 다양한 기법과 기구를 이용한 <br />
-                                            포괄적이고 집중적인 치료를 위한 클리닉
-                                        </p>
-                                        <a href="#" class="btn_more"> 더보기</a>
-                                    </li>
-                                    <li>
-                                        <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
-                                        <p class="mTxt">
-                                            교육 및 다양한 기법과 기구를 이용한 <br />
-                                            포괄적이고 집중적인 치료를 위한 클리닉
-                                        </p>
-                                        <a href="#" class="btn_more"> 더보기</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="tabContent3-3" style="display: none">
-                                <h2 class="blind">발급</h2>
-                                <ul class="tab-cont">
-                                    <li>
-                                        <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
-                                        <p class="mTxt">
-                                            교육 및 다양한 기법과 기구를 이용한 <br />
-                                            포괄적이고 집중적인 치료를 위한 클리닉
-                                        </p>
-                                        <a href="#" class="btn_more"> 더보기</a>
-                                    </li>
-                                    <li>
-                                        <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
-                                        <p class="mTxt">
-                                            교육 및 다양한 기법과 기구를 이용한 <br />
-                                            포괄적이고 집중적인 치료를 위한 클리닉
-                                        </p>
-                                        <a href="#" class="btn_more"> 더보기</a>
-                                    </li>
-                                    <li>
-                                        <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
-                                        <p class="mTxt">
-                                            교육 및 다양한 기법과 기구를 이용한 <br />
-                                            포괄적이고 집중적인 치료를 위한 클리닉
-                                        </p>
-                                        <a href="#" class="btn_more"> 더보기</a>
-                                    </li>
-                                    <li>
-                                        <em class="mCa">재활의학클리닉</em>
-                                        <strong class="mTit">호흡재활클릭닉</strong>
+                                        <strong class="mTit">호흡재활클리닉</strong>
                                         <p class="mTxt">
                                             교육 및 다양한 기법과 기구를 이용한 <br />
                                             포괄적이고 집중적인 치료를 위한 클리닉
@@ -733,37 +681,38 @@ body 클래스 규칙 :
                 </div>
             </div>
             <script>
-                $("#tabContent3-1 .tab-cont").slick({
+                $(".mBtm .slider").slick({
                     infinite: true,
                     // autoplay: true,
                     speed: 300,
                     slidesToShow: 1,
                     dots: true,
+                    dotsClass: "custom_paging",
                     customPaging: function (slider, i) {
-                        var thumb = jQuery(slider.$slides[i]).data();
-                        return "<a> 0" + (i + 1) + "</a>";
+                        console.log(slider);
+                        return i + 1 + "<em>/ 0" + slider.slideCount + "</em>";
                     },
                 });
-                $("#tabContent3-2 .tab-cont").slick({
-                    infinite: true,
-                    // autoplay: true,
-                    speed: 300,
-                    slidesToShow: 1,
-                    dots: true,
-                    customPaging: function (slider, i) {
-                        var thumb = jQuery(slider.$slides[i]).data();
-                        return "<a> 0" + (i + 1) + "</a>";
-                    },
-                });
+                // $("#tabContent3-2 .tab-cont").slick({
+                //     infinite: true,
+                //     // autoplay: true,
+                //     speed: 300,
+                //     slidesToShow: 1,
+                //     dots: true,
+                //     customPaging: function (slider, i) {
+                //         var thumb = jQuery(slider.$slides[i]).data();
+                //         return "<a> 0" + (i + 1) + "</a>";
+                //     },
+                // });
 
-                $(function () {
-                    let $mBtmDots = $("#tabContent3-1 .slick-dots"),
-                        dotsLast = $mBtmDots.find("li").last(),
-                        dotsLength = $mBtmDots.find("li").length,
-                        num = 1;
+                // $(function () {
+                //     let $mBtmDots = $("#tabContent3-1 .slick-dots"),
+                //         dotsLast = $mBtmDots.find("li").last(),
+                //         dotsLength = $mBtmDots.find("li").length,
+                //         num = 1;
 
-                    $mBtmDots.append('<li class="lst"> / 0' + dotsLength + "</li>");
-                });
+                //     $mBtmDots.append('<li class="lst"> / 0' + dotsLength + "</li>");
+                // });
             </script>
 
             <div class="mInfo">
