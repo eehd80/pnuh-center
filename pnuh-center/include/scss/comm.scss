@@ -25,6 +25,11 @@
         }
     }
 }
+.slider {
+    .slick-arrow {
+        z-index: 1;
+    }
+}
 
 // layout
 body {

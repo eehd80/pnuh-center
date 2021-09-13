@@ -320,6 +320,10 @@ legend {
   display: block;
 }
 
+.slider .slick-arrow {
+  z-index: 1;
+}
+
 body {
   overflow-x: hidden;
   overflow-y: auto;
