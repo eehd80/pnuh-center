@@ -2334,6 +2334,50 @@ footer .copyright {
   content: "\f107";
 }
 
+.mIco-slide {
+  position: relative;
+  height: 100%;
+}
+
+.mIco-slide .slick-slide {
+  position: relative;
+  height: 910px;
+}
+
+.mIco-slide .slick-arrow {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #0070c3;
+  font-size: 0;
+}
+
+.mIco-slide .slick-arrow::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+}
+
+.mIco-slide .slick-prev {
+  right: 82px;
+  z-index: 1;
+}
+
+.mIco-slide .slick-prev::before {
+  content: "\f104";
+}
+
+.mIco-slide .slick-next {
+  right: 0;
+  z-index: 1;
+}
+
+.mIco-slide .slick-next::before {
+  content: "\f105";
+}
+
 .mIcoBnr ul {
   overflow: hidden;
 }
