@@ -8,7 +8,7 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
-    max-width: 1800px;
+    // max-width: 1800px;
     margin: 0 auto;
 
     .list {
@@ -21,6 +21,7 @@
             background-size: cover;
             background-position: 50% 50%;
             background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .txt-area {
