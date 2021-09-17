@@ -608,22 +608,67 @@
     background: url(../../images/main/bg-mBtm.png) no-repeat 50% 50% / cover;
 
     .container {
+        display: flex;
+        justify-content: space-between;
         height: 910px;
         padding-top: 265px;
     }
+
     .tab-wrap {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .successiveTab {
         display: flex;
         justify-content: flex-end;
         flex-grow: 0;
         position: relative;
         width: 560px;
-        button {
+
+        .active {
+            .link-tab {
+                background-color: $prim1;
+                color: $w;
+            }
+            .desc {
+                display: block;
+            }
+        }
+
+        .desc {
+            display: none;
+            position: absolute;
+            top: 65px;
+            right: 0;
+            width: 560px;
+            height: 257px;
+            padding: 45px 0 0 35px;
+            strong {
+                display: block;
+                font-size: 27px;
+                font-weight: 700;
+                color: $w;
+            }
+            p {
+                margin-top: 8px;
+                font-size: 18px;
+                font-weight: 300;
+                color: $w;
+            }
+        }
+
+        .tab-1 {
+            .desc {
+                background: url(../../images/main/midBnr-01.png) no-repeat 0 0 / cover;
+            }
+        }
+        .tab-2 {
+            .desc {
+                background: url(../../images/main/midBnr-02.png) no-repeat 0 0 / cover;
+            }
+        }
+        .tab-3 {
+            .desc {
+                background: url(../../images/main/midBnr-03.png) no-repeat 0 0 / cover;
+            }
+        }
+        .link-tab {
             display: block;
             height: 42px;
             padding: 0 36px;
@@ -638,9 +683,12 @@
             }
         }
     }
-    .successiveWrap {
-        width: 510px;
-        padding-left: 50px;
+
+    .slider {
+        position: relative;
+        width: 460px;
+        height: 300px;
+        padding-top: 56px;
         .mCa {
             display: block;
             opacity: 0.5;
@@ -671,57 +719,8 @@
             border: 1px solid $w;
             color: $w;
         }
-
-        .desc {
-            display: none;
-            position: absolute;
-            top: 65px;
-            right: 0;
-            width: 560px;
-            height: 257px;
-            padding: 45px 0 0 35px;
-            strong {
-                display: block;
-                font-size: 27px;
-                font-weight: 700;
-                color: $w;
-            }
-            p {
-                margin-top: 8px;
-                font-size: 18px;
-                font-weight: 300;
-                color: $w;
-            }
-        }
-        .active .desc {
-            display: block;
-        }
     }
 
-    .tab-1 {
-        .desc {
-            background: url(../../images/main/midBnr-01.png) no-repeat 0 0 / cover;
-        }
-    }
-    .tab-2 {
-        .desc {
-            background: url(../../images/main/midBnr-01.png) no-repeat 0 0 / cover;
-        }
-    }
-    .tab-3 {
-        .desc {
-            background: url(../../images/main/midBnr-01.png) no-repeat 0 0 / cover;
-        }
-    }
-    .slider {
-        position: relative;
-        width: 460px;
-        height: 300px;
-        padding-top: 56px;
-    }
-    .slick-slide {
-        width: 460px !important;
-    }
     .slick-arrow {
         position: absolute;
         top: 65px;
